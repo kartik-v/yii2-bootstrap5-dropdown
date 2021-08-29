@@ -1,7 +1,7 @@
 /*!
  * @package   yii2-bootstrap5-dropdown
  * @author    Kartik Visweswaran <kartikv2@gmail.com>
- * @copyright Copyright &copy; Kartik Visweswaran, Krajee.com, 2015 - 2020
+ * @copyright Copyright &copy; Kartik Visweswaran, Krajee.com, 2015 - 2021
  * @version   1.0.0
  *
  * Bootstrap 4 Dropdown Nested Submenu Script

@@ -24,7 +24,7 @@
     },
     "autoload": {
         "psr-4": {
-            "kartik\\bs4dropdown\\": "src"
+            "kartik\\bs5dropdown\\": "src"
         }
     },
     "suggest": {
