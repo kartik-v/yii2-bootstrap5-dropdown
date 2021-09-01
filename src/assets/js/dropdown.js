@@ -10,26 +10,24 @@
  * For more Yii related demos visit http://demos.krajee.com
  **/
 (function ($) {
-    "use strict";
-    $('.dropdown-menu a.dropdown-toggle').on('click', function () {
-        // noinspection JSValidateTypes
+    "use strict"
+    $('.dropdown-menu a.dropdown-toggle').on('click', function (e) {
         var $el = $(this), $parent = $el.offsetParent(".dropdown-menu"), $subMenu, $subMenuParent;
-        if (!$el.next().hasClass('show')) {
-            $el.parents('.dropdown-menu').first().find('.show').removeClass("show");
-        }
-        $subMenu = $el.next(".dropdown-menu").toggleClass('show');
+
+        $el.parents('.dropdown-menu').first().find('.dropdown-toggle.show').each(function(){
+           if (!$(this).is($el)) {
+               $(this).removeClass('show');
+           }
+        });
+
+        $subMenu = $el.next('.dropdown-menu');
         $subMenuParent = $subMenu.closest('.dropdown');
         $subMenuParent.closest('.dropdown-menu').find('.dropdown').each(function () {
             var $el = $(this);
             if (!$el.is($subMenuParent)) {
-                $el.removeClass('is-expanded');
+                $el.removeClass('is-expanded show');
+                $el.find('.dropdown-menu').removeClass('is-expanded show');
             }
-        });
-        $subMenuParent.toggleClass('is-expanded');
-        $el.parent("li.nav-item").toggleClass('show');
-        $el.parents('.dropdown.show').on('hidden.bs.dropdown', function () {
-            $('.dropdown-menu .show').removeClass("show");
-            $('.dropdown-menu .is-expanded').removeClass("is-expanded");
         });
         $el.next().css({"top": $el[0].offsetTop, "left": $parent.outerWidth() - 4});
         return false;

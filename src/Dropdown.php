@@ -8,6 +8,7 @@
 
 namespace kartik\bs5dropdown;
 
+use Exception;
 use yii\base\InvalidConfigException;
 use yii\bootstrap5\Dropdown as Yii2Dropdown;
 use yii\bootstrap5\Html;
@@ -63,13 +64,14 @@ class Dropdown extends Yii2Dropdown
     public function run(): string
     {
         DropdownAsset::register($this->getView());
+
         return parent::run();
     }
 
     /**
      * Renders menu items.
-     * @param array $items the menu items to be rendered
-     * @param array $options the container HTML attributes
+     * @param  array  $items  the menu items to be rendered
+     * @param  array  $options  the container HTML attributes
      * @return string the rendering result.
      * @throws InvalidConfigException if the label option is not specified in one of the items.
      * @throws Exception
@@ -123,7 +125,8 @@ class Dropdown extends Yii2Dropdown
                 Html::addCssClass($submenuOptions, ['widget' => 'dropdown-submenu dropdown-menu']);
                 Html::addCssClass($linkOptions, ['toggle' => 'dropdown-toggle']);
 
-                $lines[] = Html::beginTag('li', array_merge_recursive(['class' => ['dropdown'], 'aria-expanded' => 'false'], $itemOptions));
+                $lines[] = Html::beginTag('li',
+                    array_merge_recursive(['class' => ['dropdown'], 'aria-expanded' => 'false'], $itemOptions));
                 $lines[] = Html::a($label, $url, array_merge([
                     'data-bs-toggle' => 'dropdown',
                     'aria-expanded' => 'false',
