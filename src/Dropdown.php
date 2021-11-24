@@ -3,7 +3,7 @@
  * @package   yii2-bootstrap5-dropdown
  * @author    Kartik Visweswaran <kartikv2@gmail.com>
  * @copyright Copyright &copy; Kartik Visweswaran, Krajee.com, 2015 - 2021
- * @version   1.0.1
+ * @version   1.0.2
  */
 
 namespace kartik\bs5dropdown;
@@ -92,6 +92,7 @@ class Dropdown extends Yii2Dropdown
             if (!array_key_exists('label', $item)) {
                 throw new InvalidConfigException("The 'label' option is required.");
             }
+            /** @noinspection PhpIssetCanBeReplacedWithCoalesceInspection */
             $encodeLabel = isset($item['encode']) ? $item['encode'] : $this->encodeLabels;
             $label = $encodeLabel ? Html::encode($item['label']) : $item['label'];
             $itemOptions = ArrayHelper::getValue($item, 'options', []);

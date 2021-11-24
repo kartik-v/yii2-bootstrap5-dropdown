@@ -1,6 +1,15 @@
 Change Log: `yii2-bootstrap5-dropdown`
 ======================================
 
+## Version 1.0.2
+
+**Date:** 21-Sep-2021
+
+- (enh #2): Correct styling of each dropdown menu container: 
+  - to ensure they fit each of the enclosed dropdown item
+  - to ensure they maintain the style on window scroll
+- (enh #1): Fix "syntax error, unexpected '?'" for older php version.
+
 ## Version 1.0.1
 
 **Date:** 21-Sep-2021
