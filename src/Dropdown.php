@@ -3,7 +3,7 @@
  * @package   yii2-bootstrap5-dropdown
  * @author    Kartik Visweswaran <kartikv2@gmail.com>
  * @copyright Copyright &copy; Kartik Visweswaran, Krajee.com, 2015 - 2021
- * @version   1.0.2
+ * @version   1.0.1
  */
 
 namespace kartik\bs5dropdown;
@@ -15,12 +15,12 @@ use yii\bootstrap5\Html;
 use yii\helpers\ArrayHelper;
 
 /**
- * Dropdown renders a Bootstrap dropdown menu component. This widget extends the default
- * `yii\bootstrap5\Dropdown` widget to include nested submenu behavior and styling.
+ * Dropdown renders a Bootstrap 4.x dropdown menu component. This widget extends the default bootstrap [[Yii2Dropdown]]
+ * widget to include nested submenu behavior and styling.
  *
  * For example,
  *
- * ```php
+ * ~~~
  * <div class="dropdown">
  *     <?php
  *         echo \yii\helpers\Html::button('Dropdown Button', [
@@ -53,8 +53,9 @@ use yii\helpers\ArrayHelper;
  *         ]);
  *     ?>
  * </div>
- * ```
- * @see http://getbootstrap.com/javascript/#dropdowns
+ * ~~~
+ *
+ * @see https://getbootstrap.com/docs/5.1/components/dropdowns
  */
 class Dropdown extends Yii2Dropdown
 {
@@ -69,10 +70,11 @@ class Dropdown extends Yii2Dropdown
     }
 
     /**
-     * Renders menu items.
+     * Renders menu items for the dropdown with ability for multi level submenu nesting.
+     *
      * @param  array  $items  the menu items to be rendered
      * @param  array  $options  the container HTML attributes
-     * @return string the rendering result.
+     * @return string the rendered result.
      * @throws InvalidConfigException if the label option is not specified in one of the items.
      * @throws Exception
      */
