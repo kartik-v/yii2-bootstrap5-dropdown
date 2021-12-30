@@ -25,7 +25,7 @@
 Enhanced Bootstrap 5.x dropdown widget for Yii2 framework with nested submenu support.
 
 ## Docs & Demo
-You can see detailed [demonstration](https://demos.krajee.com/bootstrap5-dropdown) and the API [code documentation](https://docs.krajee.com/kartik-bs5dropdown-buttondropdown) on usage of the extension.
+You can see detailed [docs & demos](https://demos.krajee.com/bootstrap5-dropdown) and the API [code documentation](https://docs.krajee.com/kartik-bs5dropdown-buttondropdown) on usage of the extension.
 
 ## Installation
 
